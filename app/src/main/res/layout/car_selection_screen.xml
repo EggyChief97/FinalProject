@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ocwiejaj20.finalproject.CarSelectionActivity">
+
+    <!--<TextView-->
+        <!--android:id="@+id/Brand"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="30dp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:text="Select Brand of Car"-->
+
+        <!--/>-->
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/search_bar"
+        android:queryHint="Type Car"
+
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:visibility="gone" />
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </SearchView>
+
+    <!--<Spinner-->
+        <!--android:id="@+id/BrandSpinner"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/Brand"-->
+        <!--android:layout_marginBottom="15dp"-->
+        <!--android:layout_marginStart="15dp"-->
+        <!--android:text="Brand">-->
+
+    <!--</Spinner>-->
+
+    <TextView
+        android:id="@+id/Model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:layout_margin="15dp"
+        android:textSize="20sp"
+        android:text="Select Model Of Car You Currently Have"
+
+        />
+
+    <Spinner
+        android:id="@+id/ModelSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Model"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:text="Model">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/Year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ModelSpinner"
+        android:layout_margin="15dp"
+        android:textSize="20sp"
+        android:text="Select Year Of Car You Currently Have"
+
+        />
+
+    <Spinner
+        android:id="@+id/YearSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Year"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:text="Year">
+
+    </Spinner>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to home"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:id="@+id/BackToHomeScreen"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info on car Selected"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:id="@+id/ToInfoScreenOnCarSelected"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Car to Garage"
+        android:layout_below="@id/YearSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        />
+
+</RelativeLayout>
